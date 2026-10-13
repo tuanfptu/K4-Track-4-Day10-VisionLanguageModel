@@ -1,5 +1,7 @@
 data/
 work/
+/archive.zip
+/K4-Day10-RTX3090-Package.zip
 .env
 .venv/
 __pycache__/
@@ -12,3 +14,7 @@ adapter*/
 .ipynb_checkpoints/
 .pytest_cache/
 .DS_Store
+
+/Day10_code_report.tar.gz
+/*.crdownload
+/.codex_day10_review_stage/
