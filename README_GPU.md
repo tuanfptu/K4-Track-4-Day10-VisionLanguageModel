@@ -50,6 +50,12 @@ python -m student.run_lab all --train-batch-size 1 --grad-accum 8
 
 Để chạy lại riêng baseline E0: `python -m student.run_lab e0`. Để tạo lại báo cáo từ evidence đã có: `python -m student.run_lab report`. `--skip-e5` có thể bỏ lượt GRPO nếu chỉ cần phần bắt buộc, nhưng để hoàn tất yêu cầu E0–E5 hãy chạy mặc định không có cờ này.
 
+Kiểm tra riêng hàm reward E5 (không cần GPU):
+
+```bash
+python -m unittest student.test_reward
+```
+
 ## 4. File kết quả
 
 - `report/evidence/e0.json` đến `e3.json`: kết quả test sinh từ `scripts/score.py`.
@@ -61,19 +67,3 @@ python -m student.run_lab all --train-batch-size 1 --grad-accum 8
 - `work/predictions/`: JSONL output thô trên validation/test.
 
 Không xóa `work/` trước khi tạo bản sao lưu. Adapter LoRA và projector là hai phần riêng; E2/E3 cần cả hai để suy luận đúng.
-
-## 5. Nộp bài
-
-Trước khi nộp, đọc lại `REPORT.md` để xác nhận tên, thời gian chạy thực tế, số liệu và phần “Nhìn lại” đúng với lần chạy của bạn. Chạy checker từ thư mục gốc:
-
-```bash
-python scripts/check_submission.py
-```
-
-Repo nộp phải để public và có ít nhất 5 commit. Không commit `data/`, `work/`, `.env`, token hoặc trọng số (`*.safetensors`, `*.bin`, `*.pt`). Giữ nguyên `scripts/`, `tests/` và `configs/` do đề cung cấp.
-
-Phần bonus E5 yêu cầu có test cho reward. Các ca kiểm tra nằm trong `student/test_reward.py`; có thể chạy riêng bằng:
-
-```bash
-python -m unittest student.test_reward
-```
