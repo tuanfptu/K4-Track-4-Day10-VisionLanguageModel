@@ -64,9 +64,15 @@ Không xóa `work/` trước khi tạo bản sao lưu. Adapter LoRA và projecto
 
 ## 5. Nộp bài
 
-Đọc lại `REPORT.md`, điền họ tên và đoạn “Nhìn lại” bằng trải nghiệm thật của bạn. Chạy `python scripts/check_submission.py`. Lưu ý checker còn yêu cầu evidence nằm trong repo có Git và tối thiểu 5 commit; hãy commit notebook/mã theo tiến độ, nhưng không đưa `data/`, `work/`, token hoặc trọng số lên GitHub. Script chấm, checker, tests và configs của giảng viên được giữ nguyên.
+Trước khi nộp, đọc lại `REPORT.md` để xác nhận tên, thời gian chạy thực tế, số liệu và phần “Nhìn lại” đúng với lần chạy của bạn. Chạy checker từ thư mục gốc:
 
-`student/test_reward.py` chứa các ca test reward E5 theo yêu cầu đề. Chạy khi cần kiểm tra độc lập:
+```bash
+python scripts/check_submission.py
+```
+
+Repo nộp phải để public và có ít nhất 5 commit. Không commit `data/`, `work/`, `.env`, token hoặc trọng số (`*.safetensors`, `*.bin`, `*.pt`). Giữ nguyên `scripts/`, `tests/` và `configs/` do đề cung cấp.
+
+Phần bonus E5 yêu cầu có test cho reward. Các ca kiểm tra nằm trong `student/test_reward.py`; có thể chạy riêng bằng:
 
 ```bash
 python -m unittest student.test_reward
