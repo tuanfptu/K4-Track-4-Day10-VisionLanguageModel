@@ -1,0 +1,76 @@
+{
+  "n_images": 311,
+  "parse_valid_rate": 0.9935691318327974,
+  "missing_predictions": 0,
+  "micro": {
+    "precision": 0.1716514954486346,
+    "recall": 0.22641509433962265,
+    "f1": 0.19526627218934908,
+    "tp": 132,
+    "fp": 637,
+    "fn": 451
+  },
+  "per_class": {
+    "pothole": {
+      "precision": 0.11413043478260869,
+      "recall": 0.17355371900826447,
+      "f1": 0.1377049180327869,
+      "tp": 21,
+      "fp": 163,
+      "fn": 100
+    },
+    "crack": {
+      "precision": 0.09381663113006397,
+      "recall": 0.14715719063545152,
+      "f1": 0.11458333333333334,
+      "tp": 44,
+      "fp": 425,
+      "fn": 255
+    },
+    "manhole": {
+      "precision": 0.5775862068965517,
+      "recall": 0.4110429447852761,
+      "f1": 0.4802867383512545,
+      "tp": 67,
+      "fp": 49,
+      "fn": 96
+    },
+    "other": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "mean_iou": 0.6648097448728052,
+  "fp_per_image": 2.0482315112540195,
+  "f1_ci95": [
+    0.16329588014981275,
+    0.22893481717011127
+  ],
+  "score_version": 1,
+  "name": "E4 data_size=0.1",
+  "dataset_version": "d10-21e4070301",
+  "split": "test",
+  "coord": "norm1000",
+  "meta": {
+    "experiment": "e1",
+    "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+    "dataset_version": "d10-21e4070301",
+    "trainable_params": 33030144,
+    "matched_lora_modules": 252,
+    "peak_vram_gb": 6.326351642608643,
+    "train_minutes": 21.029056934515634,
+    "max_steps": 300,
+    "batch_size": 2,
+    "grad_accum": 4,
+    "effective_batch_size": 8,
+    "rank": 16,
+    "learning_rate": 0.0002,
+    "seed": 42,
+    "coord_scale": "norm1000",
+    "mean_last_20_loss": 0.00936149744593422
+  }
+}
