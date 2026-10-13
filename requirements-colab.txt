@@ -1,9 +1,10 @@
-# Dùng torch/torchvision có sẵn của Colab. Phiên bản đã kiểm tra cài đặt/import ngày 2026-10-11.
+# Dùng torch/torchvision có sẵn trong image PyTorch/CUDA. Phiên bản thư viện lab được ghim để chạy ổn định.
 transformers==5.19.0
 peft==0.21.2
 trl==1.9.2
 accelerate==1.15.0
 bitsandbytes==0.50.2
+datasets
 pyyaml
 pillow
 kaggle
